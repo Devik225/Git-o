@@ -1,0 +1,189 @@
+:root {
+  --background_clr: #24292f;
+  --navbar_clr: #181d22;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Universal */
+.flexme {
+  display: flex;
+}
+
+* {
+  font-family: "Mukta", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+body {
+  background-color: var(--background_clr);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  background-color: var(--navbar_clr);
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 80px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.search_box {
+  width: 200px;
+  padding: 0 10px;
+  height: 28px;
+  font-size: 14px;
+  color: #8b8e90;
+  font-weight: 300;
+  margin-right: 8px;
+  background-color: var(--navbar_clr);
+  border: 1px solid #585858;
+  border-radius: 3px;
+}
+
+.search_btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  font-weight: 300 !important;
+  border: 1px solid #2a9048;
+  background-color: #268741;
+}
+
+/* Common in both sections */
+.heading {
+  font-size: 19px;
+  font-weight: 300;
+  color: #aca9a9;
+}
+
+/* Profile section */
+.profile {
+  margin-top: 140px;
+}
+
+.stats {
+  margin-top: 30px;
+  height: 180px;
+}
+
+/* containers */
+
+.stats_image {
+  width: 180px;
+  height: 100%;
+  background-color: rgb(212, 212, 212);
+  border-radius: 2px;
+  margin-right: 20px;
+}
+
+.block1 {
+  width: 390px;
+  height: 178px;
+  border-radius: 2px;
+  background-color: #272c32;
+  border: 1px solid #585858;
+  margin-right: 10px;
+}
+
+.block2 {
+  width: 370px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.up_box {
+  width: 368px;
+  height: 128px;
+  border-radius: 2px;
+  background-color: #272c32;
+  border: 1px solid #585858;
+}
+
+.down_box {
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.follow_format {
+  display: flex;
+  width: 180px;
+  height: 38px;
+  font-size: 14px;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #272c32;
+  border: 1px solid #585858;
+}
+
+.followers,
+.following {
+  margin: auto;
+}
+
+.block3 {
+  width: 350px;
+  height: 178px;
+  border-radius: 2px;
+  background-color: #272c32;
+  border: 1px solid #585858;
+}
+
+/* Data */
+
+.name,
+.bio {
+  font-size: 16px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.bio_content {
+  font-size: 14px;
+  margin: 0 15px;
+  text-align: justify;
+  opacity: 0.6;
+}
+
+/* subheading */
+.subheading {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+/* Repositories section */
+.repositories {
+  margin-top: 70px;
+}
+
+.contain_repo {
+  margin-top: 30px;
+  height: 200px;
+  width: 100%;
+  background-color: #1d2227;
+  border-radius: 2px;
+}
