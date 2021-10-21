@@ -9,6 +9,14 @@ select:focus {
   outline: none;
 }
 
+.watermark {
+  text-align: right;
+  position: relative;
+  left: 90px;
+  font-size: 9px;
+  opacity: 0.6;
+}
+
 /* Universal */
 .flexme {
   display: flex;
@@ -25,7 +33,6 @@ body {
   background-color: var(--background_clr);
   margin-left: 100px;
   margin-right: 100px;
-  /* display: block; */
 }
 
 /* Navbar */
@@ -186,7 +193,7 @@ body {
 /* Repositories section */
 .repositories {
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 55px;
 }
 
 .contain_repo::-webkit-scrollbar {
@@ -239,8 +246,8 @@ body {
   bottom: 0;
   width: 100%;
   height: 27px;
-  background-color: #9d3535;
   border-radius: 0 0 3px 3px;
+  background-color: #434f5c;
 }
 
 .card_lang_txt {
@@ -277,6 +284,11 @@ body {
 
   .search_box {
     width: 55%;
+    height: 33px;
+  }
+
+  .search_btn {
+    height: 34px;
   }
 
   .contain_repo {
@@ -300,12 +312,21 @@ body {
     bottom: 10px;
     color: #061524;
   }
+
+  .contain_repo {
+    height: 300px;
+    gap: 0;
+  }
 }
 
 @media (orientation: portrait) {
   body {
     margin-left: 30px;
     margin-right: 30px;
+  }
+
+  .watermark {
+    left: 22px;
   }
 
   .navbar {
@@ -341,17 +362,11 @@ body {
     flex-direction: row;
   }
 
-  .contain_repo {
-    height: 300px;
-    gap: 0;
-  }
-
   .stats_image,
   .block1 {
     height: 90%;
   }
 
-  .block3,
   .block1 {
     width: 99%;
   }
@@ -362,6 +377,7 @@ body {
   }
 
   .block3 {
+    width: 99.5%;
     margin-top: 15px;
   }
 }
