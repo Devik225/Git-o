@@ -1,0 +1,114 @@
+* {
+  font-family: "Mukta", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+body {
+  background-color: #0d1117;
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  background-color: var(--navbar_clr);
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 80px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+.up {
+  margin-top: 80px;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+}
+
+.down_txt {
+  font-size: 52px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.down_btn {
+  margin-left: 20px;
+  font-size: 24px;
+  background-color: #20252c;
+  padding: 5px 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 1100px) {
+  .contain {
+    margin: auto;
+    flex-direction: column;
+  }
+  .contain_txt {
+    /* position: absolute;
+    left: 100px;
+    bottom: 10px; */
+  }
+  .up {
+    margin: 0;
+    font-size: 48px;
+  }
+  .down_txt {
+    font-size: 32px;
+  }
+  .down_btn {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+  .navbar {
+    padding-left: 30px;
+  }
+
+  .contain {
+    margin-top: 100px;
+    width: 500px;
+  }
+
+  .contain_txt {
+    margin-left: 150px;
+    width: 100%;
+  }
+}

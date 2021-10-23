@@ -32,17 +32,13 @@ input:focus {
   outline: none;
 }
 
-input:-webkit-autofill {
-  -webkit-text-fill-color: #373838;
-}
-
 .search_box {
   width: 58%;
   padding: 0 20px;
   height: 38px;
   font-size: 18px;
   color: #373838;
-  background-color: #c4c5c7b7;
+  background-color: #c4c5c7ce;
   font-weight: 300;
   margin-right: 10px;
   border: 1px solid #585858;
@@ -58,4 +54,25 @@ input:-webkit-autofill {
   font-weight: 300 !important;
   border: 1px solid #2a9048;
   background-color: #268741;
+}
+
+@media (max-width: 1200px) {
+  .search {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .search {
+    width: 80%;
+    left: 13%;
+  }
+
+  .logo {
+    font-size: 42px;
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+  }
 }

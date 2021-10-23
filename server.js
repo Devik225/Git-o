@@ -29,8 +29,23 @@ app.get('/search', (req, res)=>{
 
 app.post("/search", (req, res)=>{
     user = req.body.user;
-    get_data();
-    res.redirect('/search');
+    let msg = get_data();
+    
+    setTimeout(() => {
+        msg.then(message=>{
+            if(message === false){
+                res.render("error", {});
+            }
+            else if(message == 404){
+                res.render("error", {});
+            }
+            else{
+                res.redirect('/search');
+            }
+        })
+        
+    }, 1000);
+    
 });
 
 //Run server
@@ -41,19 +56,23 @@ app.listen(process.env.PORT || 4000, ()=>{
 
 //fetch data
 
+
 async function get_data(){
 
     try{
         const data = await fetch("https://api.github.com/users/" + user);
         git_data = await data.json();
-        console.log(git_data);
+        // console.log(git_data);
     
         const data_repo = await fetch("https://api.github.com/users/" + user + "/repos");
         repos = await data_repo.json();
-        console.log(repos);
+        // console.log(repos);
+        // console.log(data.status);
+        return data.status;
     }
     catch{
-        console.log(err);
+        // console.log(err);
+        return false;
     }
     
 }
