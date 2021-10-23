@@ -21,7 +21,7 @@
         </div>
         <!-- search -->
         <div class="search">
-            <form action="/" method="post">
+            <form action="/search" method="post">
                 <input class="search_box" placeholder="Search User" name="user">
 
                 </input>
@@ -145,12 +145,15 @@
 
             <% for(var i=0; i<10; i++){ %>
             <div class="card">
-                <div class="card_heading">
-                    Repo 1
-                </div>
 
-                <div class="card_description">
-                    Repo 1
+                <div class="card_area">
+                    <div class="card_heading">
+                        Repo 1
+                    </div>
+    
+                    <div class="card_description">
+                        Repo 1
+                    </div>
                 </div>
 
                 <div class="card_lang flexme">
@@ -171,12 +174,18 @@
         @devik_kamath
     </div>
 
-    
+
     <!-- Functional scripts -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+
+        const card = $(".card_lang");
+        
+        card.forEach(c => {
+            c.css("background-color", "#9D3535");
+        });        
 
     </script>
 

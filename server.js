@@ -20,14 +20,17 @@ var user;
 
 //All scripts
 app.get('/', (req, res)=>{
+    res.render('home', {});
+});
+
+app.get('/search', (req, res)=>{
     res.render('index', {});
 });
 
-app.post("/", (req, res)=>{
+app.post("/search", (req, res)=>{
     user = req.body.user;
     get_data();
-
-    res.redirect('/');
+    res.redirect('/search');
 });
 
 //Run server
