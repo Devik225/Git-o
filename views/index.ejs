@@ -21,8 +21,8 @@
         </div>
         <!-- search -->
         <div class="search">
-            <form action="">
-                <input class="search_box" placeholder="Search User">
+            <form action="/" method="post">
+                <input class="search_box" placeholder="Search User" name="user">
 
                 </input>
 
@@ -142,6 +142,8 @@
         </div>
 
         <div class="contain_repo">
+
+            <% for(var i=0; i<10; i++){ %>
             <div class="card">
                 <div class="card_heading">
                     Repo 1
@@ -157,71 +159,8 @@
                     </div>
                 </div>                
             </div>
+            <%}%>
 
-            <div class="card">
-                <div class="card_heading">
-                    Repo 1
-                </div>
-
-                <div class="card_description">
-                    Repo 1
-                </div>
-
-                <div class="card_lang flexme">
-                    <div class="card_lang_txt">
-                        CSS
-                    </div>
-                </div>                
-            </div>
-
-            <div class="card">
-                <div class="card_heading">
-                    Repo 1
-                </div>
-
-                <div class="card_description">
-                    Repo 1
-                </div>
-
-                <div class="card_lang flexme">
-                    <div class="card_lang_txt">
-                        CSS
-                    </div>
-                </div>                
-            </div>
-
-            <div class="card">
-                <div class="card_heading">
-                    Repo 1
-                </div>
-
-                <div class="card_description">
-                    Repo 1
-                </div>
-
-                <div class="card_lang flexme">
-                    <div class="card_lang_txt">
-                        CSS
-                    </div>
-                </div>                
-            </div>
-            
-
-            <div class="card">
-                <div class="card_heading">
-                    Repo 1
-                </div>
-
-                <div class="card_description">
-                    Repo 1
-                </div>
-
-                <div class="card_lang flexme">
-                    <div class="card_lang_txt">
-                        CSS
-                    </div>
-                </div>                
-            </div>
         </div>
 
 
@@ -231,6 +170,15 @@
     <div class="watermark">
         @devik_kamath
     </div>
-  
+
+    
+    <!-- Functional scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+    </script>
+
 </body>
 </html>
