@@ -26,7 +26,7 @@
 
                 </input>
 
-                <button class="search_btn">
+                <button class="search_btn pointon">
                     Search
                 </button>
             </form>
@@ -42,9 +42,14 @@
         </div>
         <div class="stats">
             <!-- img -->
-            <div class="stats_image">
 
-            </div>
+            <!-- <div class="img_url total_cards">
+                <%= ejs_git_data.avatar_url %>
+            </div> -->
+
+            <img class="stats_image" src=<%= ejs_git_data.avatar_url %>>
+                
+            </img>
 
             <!-- name_bio -->
             <div class="block1">
@@ -148,7 +153,8 @@
         <div class="contain_repo">
 
             <% ejs_repos_data.forEach((data)=>{ %>
-            <div class="card">
+
+            <a class="card" target="_blank" href=<%= data.html_url %>>
 
                 <div class="card_area">
                     <div class="card_heading">
@@ -165,7 +171,8 @@
                         <%= data.language %>
                     </div>
                 </div>                
-            </div>
+            </a>
+
             <%})%>
 
         </div>
@@ -186,7 +193,14 @@
     <script>
         
         var cards = $(".total_cards").html();
-        $(".contain_repo").css("grid-template-columns", "repeat(" + cards + ", 350px)");
+
+        // var img = $(".img_url").html();
+
+        if(window.innerHeight < window.innerWidth){
+            $(".contain_repo").css("grid-template-columns", "repeat(" + cards + ", 350px)");
+        }
+
+        // $(".stats_image").css("background-image", img);
 
     </script>
 

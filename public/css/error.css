@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.pointon {
+  cursor: pointer;
+}
+
 body {
   background-color: #0d1117;
 }
