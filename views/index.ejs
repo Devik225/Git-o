@@ -16,9 +16,9 @@
     <!-- header -->
     <div class="navbar">
         <!-- logo -->
-        <div class="logo">
+        <a class="logo" href="/">
             Git-o
-        </div>
+        </a>
         <!-- search -->
         <div class="search">
             <form action="/search" method="post">
@@ -50,15 +50,15 @@
             <div class="block1">
 
                 <div class="name">
-                    Name - 
+                    Name - <span class="data_entry"> <%= ejs_git_data.name %></span>
                 </div>
 
                 <div class="bio">
-                    Bio : 
+                    Bio :
                 </div>
                 <div class="bio_content">
                     <div class="bio_content_area">
-                    I know new problems are nothing but the possibilities of learning something new.
+                        <%= ejs_git_data.bio %>
                     </div>
                 </div>
 
@@ -71,18 +71,18 @@
 
                     <div class="subheading flexme">
                         <img class="icon" src="img/twitter.svg"></img>
-                        <div class="text">Twitter username - </div>
+                        <div class="text">Twitter username - <span class="data_entry"> <%= ejs_git_data.twitter_username %></span></div>
                     </div>
 
                     <div class="subheading flexme">
                         <img class="icon" src="img/company.svg"></img>
-                        <div class="text">Company - </div>
+                        <div class="text">Company - <span class="data_entry"> <%= ejs_git_data.company %></span></div>
                     </div>
 
                     
                     <div class="subheading flexme">
                         <img class="icon" src="img/hire.svg"></img>
-                        <div class="text">Hireable - </div>
+                        <div class="text">Hireable - <span class="data_entry"> <%= ejs_git_data.hireable %></span></div>
                     </div>                    
 
                 </div>
@@ -91,13 +91,13 @@
 
                     <div class="follow_format">
                         <div class="followers">
-                            Followers - 
+                            Followers - <span class="data_entry"> <%= ejs_git_data.followers%></span>
                         </div>
                     </div>
                     
                     <div class="follow_format">
                         <div class="following">
-                            Following - 
+                            Following - <span class="data_entry"> <%= ejs_git_data.following %></span>
                         </div>
                     </div>
                     
@@ -110,23 +110,23 @@
 
                 <div class="subheading flexme" style="margin-top: 20px;">
                     <img class="icon" src="img/email.svg"></img>
-                    <div class="text">Email - </div>
+                    <div class="text">Email - <span class="data_entry"> <%= ejs_git_data.email %></span></div>
                 </div>
 
                 <div class="subheading flexme">
                     <img class="icon" src="img/location.svg"></img>
-                    <div class="text">Location - </div>
+                    <div class="text">Location - <span class="data_entry"> <%= ejs_git_data.location %></span></div>
                 </div>
 
                 
                 <div class="subheading flexme">
                     <img class="icon" src="img/repos.svg"></img>
-                    <div class="text">Public repos - </div>
+                    <div class="text">Public repos - <span class="data_entry"> <%= ejs_git_data.public_repos %></span></div>
                 </div>  
 
                 <div class="subheading flexme">
                     <img class="icon" src="img/gists.svg"></img>
-                    <div class="text">Public gists - </div>
+                    <div class="text">Public gists - <span class="data_entry"> <%= ejs_git_data.public_gists %></span></div>
                 </div> 
 
             </div>
@@ -136,33 +136,37 @@
 
 
     <!-- Repositories -->
+
+    <p class="total_cards"><%= ejs_cards%></p>
+
     <div class="repositories">
         <div class="heading">
             Repositories
         </div>
 
+
         <div class="contain_repo">
 
-            <% for(var i=0; i<10; i++){ %>
+            <% ejs_repos_data.forEach((data)=>{ %>
             <div class="card">
 
                 <div class="card_area">
                     <div class="card_heading">
-                        Repo 1
+                        <%= data.name %>
                     </div>
     
                     <div class="card_description">
-                        Repo 1
+                        <%= data.description %>
                     </div>
                 </div>
 
                 <div class="card_lang flexme">
                     <div class="card_lang_txt">
-                        CSS
+                        <%= data.language %>
                     </div>
                 </div>                
             </div>
-            <%}%>
+            <%})%>
 
         </div>
 
@@ -180,12 +184,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-
-        const card = $(".card_lang");
         
-        card.forEach(c => {
-            c.css("background-color", "#9D3535");
-        });        
+        var cards = $(".total_cards").html();
+        $(".contain_repo").css("grid-template-columns", "repeat(" + cards + ", 350px)");
 
     </script>
 

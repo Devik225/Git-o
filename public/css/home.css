@@ -3,6 +3,9 @@
   font-weight: 200;
   letter-spacing: 0.5px;
 }
+a {
+  text-decoration: none;
+}
 
 body {
   background-image: url("bg_img.jpg");
@@ -66,7 +69,7 @@ input:focus {
 @media (max-width: 1000px) {
   .search {
     width: 80%;
-    left: 13%;
+    left: 10%;
   }
 
   .logo {

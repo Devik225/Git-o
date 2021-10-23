@@ -24,7 +24,12 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/search', (req, res)=>{
-    res.render('index', {});
+    let l = repos.length;
+    res.render('index', {        
+        ejs_git_data : git_data,
+        ejs_repos_data : repos,
+        ejs_cards : l
+    });
 });
 
 app.post("/search", (req, res)=>{
@@ -32,11 +37,12 @@ app.post("/search", (req, res)=>{
     let msg = get_data();
     
     setTimeout(() => {
+        // console.log(git_data.name);
         msg.then(message=>{
             if(message === false){
                 res.render("error", {});
             }
-            else if(message == 404){
+            else if(message === 404){
                 res.render("error", {});
             }
             else{
@@ -66,7 +72,7 @@ async function get_data(){
     
         const data_repo = await fetch("https://api.github.com/users/" + user + "/repos");
         repos = await data_repo.json();
-        // console.log(repos);
+        // console.log(repos.length);
         // console.log(data.status);
         return data.status;
     }

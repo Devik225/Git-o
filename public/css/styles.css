@@ -3,6 +3,10 @@
   --navbar_clr: #181d22;
 }
 
+a {
+  text-decoration: none;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -102,6 +106,12 @@ body {
 
 /* containers */
 
+.data_entry {
+  font-size: 14px;
+  margin: 0 5px;
+  opacity: 0.8;
+}
+
 .stats_image {
   width: 100%;
   height: 100%;
@@ -200,6 +210,10 @@ body {
   display: none;
 }
 
+.total_cards {
+  display: none;
+}
+
 .contain_repo {
   display: grid;
   grid-template-columns: repeat(5, 350px);
@@ -253,12 +267,13 @@ body {
 }
 
 .card_description {
+  width: 95%;
   margin-top: 2px;
   position: absolute;
   left: 20px;
   top: 50px;
   color: #061524;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -324,6 +339,10 @@ body {
   }
   .card_description {
     display: none;
+  }
+
+  .card_area {
+    height: 67px;
   }
 
   .card_lang {

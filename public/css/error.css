@@ -5,6 +5,10 @@
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #0d1117;
 }
